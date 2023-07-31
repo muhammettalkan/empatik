@@ -1,18 +1,13 @@
 server:
-  error:
-    include-message: always
-    include-binding-errors: always
-
+  port: 9087
 spring:
+  application:
+    name: backend
   datasource:
-    password:
-    url: jdbc:postgresql://localhost:5432/registration
-    username:
+    url: jdbc:mysql://localhost:3306/log_in?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: 985263
+    driverClassName: com.mysql.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate:
-        dialect: org.hibernate.PostgreSQLDialect
-        format_sql: true
-    show_sql: true
+      ddl-auto: update
